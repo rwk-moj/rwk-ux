@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Martel:900|Montserrat:300,400,900&display=swap');
+$mainColor: #f000;
+$accentColor: #000;
+$accentGray: #efefef;
+$fontStack: 'Montserrat', Helvetica, Arial, Sans-serif;
+$noPad: 0px;
+$header: 'Montserrat', Helvetica, Sans-serif;
+
+$break-small: 320px;
+$break-medium: 800px;
+$break-large: 1200px;
+
+@mixin button {
+    background: #0a0a0a;
+    border: 0;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border-bottom: 8px solid #ff6f61;
+    display: block;
+}
+
+body {
+    color: $accentColor;
+    padding: $noPad;
+    margin: $noPad; 
+    font-family: $fontStack;
+    line-height: 1.5;
+    font-size: 16px;
+}
+a {
+    font-family: $header;
+    color: black;
+}
+a:hover, a:visited, a:focus{
+    font-family: $header;
+    color: $mainColor;
+}
+header { 
+    background:$mainColor; min-height: 1px; max-height: 70px; margin-bottom: 50px; display: grid;
+    
+    span {
+        grid-column: 1;
+        margin-top: 20px;
+
+        a, a:hover, a:focus, a:visited {
+            color: $accentColor;
+            font-family: $fontStack;
+            text-decoration: none;
+        }
+    }
+    .face-container {
+        margin: 0px auto 0px auto;
+        background: url("/images/header-bg.svg") no-repeat top center;
+        background-size: auto;
+        padding-bottom: 0px;
+        background-size: cover;
+        z-index: 0;
+    }
+    img.ma-face {
+        max-width: 120px;
+        min-width: 120px;
+        margin-top: -60px;
+    }
+}
+#header {
+    padding: 15px 15px;
+}
+::selection {
+    background: #fff8b8;
+}
+
+.compare {
+    width: 45%;
+    margin: 0 15px;
+    display: inline-grid;
+
+    @media screen and (max-width: $break-medium) {
+        width: auto;
+        display: block;
+      }
+
+}
+figcaption {
+    text-align: center;
+    margin: 10px 10px;
+    color: #2f2f2f;
+    font-size: 14px;
+    font-style: italic;
+    font-family: $header;
+}
+main {
+    padding: 15px 20px;
+    max-width: 990px;
+    margin: 0px auto;
+
+    h1.title-me {
+
+        span {
+            display: block;
+            margin-top: 15px;
+            text-transform: uppercase;
+            background: $accentGray;
+            padding: 20px;
+        }
+    }
+    h1.project-title {
+        border-bottom: 1px solid gray;
+        padding-bottom: 15px;
+    }
+    img.example {
+        max-width: 900px;
+        display: block;
+        margin: 20px auto;
+        border: 10px solid $accentGray;
+    }
+}
+.article-grid { 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+
+      @media screen and (max-width: $break-small) {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      }
+
+    article {
+        border: 1px solid #ccc;
+        box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+       
+        img {
+            max-width: 100%;
+        }  
+    }
+    .card-body {
+        padding: 0 20px 40px;
+        
+        h3 {
+            margin-top: 1rem;
+        }
+        .button {
+            @include button;
+        }
+    }
+}
+
+.wrapper {
+    margin: 0 0px;
+    display: grid;
+    grid-gap: 10px;
+  }
+  
+img { width: 100%; height: auto;}
+
+h1, h3, h4, h5, h6 {
+    color: $accentColor;
+    font-family: $header;
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 1.1;
+    margin: 0 0 1.5rem 0;
+}
+h2 {
+    color: $mainColor;
+    line-height: 1.3;
+    font-weight: 300;
+}
+blockquote {
+    border-left: 10px solid $mainColor;
+    padding: 20px 0px 20px 10px;
+    font-size: 20px;
+    background-color: #ff6f611f;
+    font-family: $header;
+}
+#wrapper:before {
+    background-attachment: fixed;
+    background-color: #000;
+    background-position: -50% 10%;
+    background-repeat: repeat-y;
+    background-size: 75% auto;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50vw;
+    z-index: -1;
+}
+#wrapper > section > header:before {
+    background: #F44336;
+    content: '';
+    display: block;
+    margin-top: 1rem;
+    position: absolute;
+    width: 2px;
+}
+#wrapper > section > header h1:before, #wrapper > section > header h2:before {
+    background: #F44336;
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    top: 1rem;
+}
+#wrapper > section > header h1:after, #wrapper > section > header h2:after {
+    background: #F44336;
+    border-radius: 0.5rem;
+    content: '';
+    display: block;
+    height: 0.5rem;
+    position: absolute;
+    top: 0.75rem;
+    width: 0.5rem;
+}
+
+footer { 
+    background: $accentGray; min-height: 1px; max-height: 50px; display: grid; padding: 15px 15px 30px 15px;
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html data-current="home" lang="en">
+	<head>
+		<title>RWK IxD</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+	</head>
+	<body>
+	  <div class="wrapper">	
+		<header id="header">
+			<span><a class="home-link" href="/" title="Back to homepage">RWK-UX</a></span>
+			<div class="face-container"><img class="ma-face" src="images/myface.png" alt="Picture of ma face" /></div>
+		</header>
+		<main>
+            <h1 class="project-title">Hide this page component - submission to GDS Design System</h1>
+            <h2>The project</h2>
+            <summary><p>Working in my delivery team in the Legal Aid Agency I identified a high-risk gap in the UK Government's website that put users at risk. In particular, victims of Domestic Abuse.</p></summary>
+            <summary><p>Assessing the risk to users, I led a collaborative Government response to create a new component that allows users to quickly hide their current page and open a new, ambiguous webpage, such as BBC Weather. This would lower the risk of drawing attention to browsing habits from a perpetrator.</p></summary>
+            <h2>My role</h2>
+            <p>I led the reponse to this work from the Ministry of Justice, writing the <a href="https://github.com/alphagov/govuk-design-system-backlog/issues/213" title="Hide this page component issue">Design System backlog issue</a>, but also coordinated the joined up submission and <a href="https://deploy-preview-1381--govuk-design-system-preview.netlify.app/components/hide-this-page/" title="Deploy preview of Hide this page component">writing the implementation guidance</a>, working closely with the Head of the GOV.UK Design System to respond to queries.</p>
+            <p>I was responsible for creating designs from concept through to final delivery and establish the narrative for the delivery team undestand the importance of the user needs.</p>
+            <p>I was also responsible for coordinating the joint effort of writing the implementation guidance that was submitted to the Design System Working Group, and acted as the single point of contact for all queries from the Head of Interaction Design at GDS.
+            <h2>Working as part of an agile team and establishing a working group</h2>
+            <p>Within the MoJ, I led the multi-disciplinary delivery team throughout the project, working with a:</p>
+            <ul>
+                <li>Content Designer</li>
+                <li>User Researcher</li>
+                <li>Product Manager</li>
+                <li>Front-end Developer</li>
+            </ul>
+            <p>This work required a cross-government response to the challenge. Using cross Government Slack channels and networking, I identified several Departments that were keen to implement a similar component on their services.</p>
+            <p>I quickly establised a working group to begin the process of creating a unified approach to this project. Members of the group were from different professions and from:</p>
+            <ul>
+                <li><strong>Department for Work and Pensions</strong> - User Researcher</li>
+                <li><strong>Cabinet Office</strong> - Product Manager</li>
+                <li><strong>Scottish Government</strong> - Senior Interaction Designer</li>
+            </ul>
+            <p>I ensured the working group met every few weeks over a period of 6 months to ensure that we were working towards the same goals and were able to discuss how to progress our collaborative work.</p>
+            <h2>The problem</h2>
+            <p>The biggest risk to a victim of Domestic Abuse is homicide and serious physical assaults - this is at its greatest risk when a victim is planning to flee or escape from the perpetrator. Often, one of the first things a victim will do is to speak to someone to make a disclosure about abuse.</p>
+            <p>The second thing they will do is research and find help online, often using Government services.</p>
+            <ul class="cards">
+            <li class="cards__item">
+                <div class="card">
+                <div class="card__image card__image--fence"></div>
+                <div class="card__content">
+                    <div class="card__title">40,000</div>
+                    <p class="card__text">Number of calls made to the National Domestic Abuse Helpline in the first <strong>3 months</strong> of lockdown</p>
+                </div>
+                </div>
+            </li>
+            <li class="cards__item">
+                <div class="card">
+                <div class="card__image card__image--river"></div>
+                <div class="card__content">
+                    <div class="card__title">50</div>
+                    <p class="card__text">Number of <strong>women and children that have died</strong> as a result of DA since lockdown (highest number in 11 years)</p>
+                </div>
+                </div>
+            </li>
+            <li class="cards__item">
+                <div class="card">
+                <div class="card__image card__image--record"></div>
+                <div class="card__content">
+                    <div class="card__title">950%</div>
+                    <p class="card__text">Website traffic <strong>increase</strong> to the National Domestic Abuse Helpline website.</p>
+                </div>
+                </div>
+            </li>
+            </ul>
+            <p>By not having a way for users to be able to safely hide their browser, we were putting our users across Government that use our services at risk.</p>
+            <p>I created the following user story for the delivery team for our us to ensure that we were starting off our work with the basic user needs.</p>
+            <blockquote><span>User story</span>As someone who is at risk, I need to quickly and safely be able to change or close my browser window and clear my browser history to prevent someone else from seeing my screen and search history.</blockquote>
+            <h2>My approach</h2>   
+            <h3>Delivery team work</h3>
+            <p>Within the delivery team, we identified through speaking to a subject matter expert - someone who worked with Domestic Abuse survivors - that it was more important to have something than nothing on our service and set out to create an MVP to keep users safe.</p>
+            <p>I set out <strong>creating rapid sketches</strong> to look at user flows through our Legal Aid service and what type of component we would need to create.</p>
+            <figure class="compare">
+               <img src="images/htp_image1.jpg" class="example" alt="Sketches of a component">
+              <figcaption>Sketch looked at existing components that could be extended.</figcaption>
+            </figure>
+            <figure class="compare">
+               <img src="images/htp_image2.jpg" class="example " alt="Sketches of a component">              
+              <figcaption>These rapid sketches helped quickly ideate on desktop and mobile an MVP to implement on the LAA live service.</figcaption>
+            </figure>
+            <p>These initial sketches were discussed with the delivery team and the preferred solution was mocked up in a higher fidelity design using the GDS prototyping kit.</p>
+            <p>Due to the time critical aspect of this work and the fact we were going to be extending the <code>&lt;button&gt;</code> component, I chose to build in the kit to save time.</p>
+            <p>Utilising the Design System, I created two MVP design concepts and presented these back to the Delivery Team. Talking the team through the design options, I proposed we used the red button as it signified a destructive action more clearly than a green button that within the GOV.UK colour palette is used for completing a task.</p>
+            <h4>Desktop screen designs using GOV.UK page 2/3 width layout</h4>
+            <figure class="compare">
+               <img src="images/htp_green_iteration.png" class="example" alt="Prototype kit iteration - green">
+              <figcaption>Design used the green button component.</figcaption>
+            </figure>
+            <figure class="compare">
+               <img src="images/htp_red_iteration.png" class="example " alt="Prototype kit iteration - red">              
+              <figcaption>Design used the red button component.</figcaption>
+            </figure>
+            <p>I led on running a design sprint and SME feedback session that allowed us to capture feedback on the component itself, but also identify the risks to users. This was all captured on a miro board which enabled us to have a holistic overview of our approach to the component.</p>
+            <p>I also used this board to capture feedback from testing of the prototype with the SME, the team and other designers, developers and accessibility specialists across the MoJ. In addition to this, I presented our work to the weekly Design System meeting for feedback.</p>
+            <figure>
+               <img src="images/miro_capture_1.png" class="example" alt="Prototype kit iteration - green">
+              <figcaption>Miro was used to facilitate a shared team and SME workshop to understand user behaviour and needs.</figcaption>
+            </figure>
+            <figure>
+               <img src="images/miro_capture_2.png" class="example" alt="Prototype kit iteration - green">
+              <figcaption>Miro was also used to capture and note feedback from other professions and the SME from on the MVP </figcaption>
+            </figure>
+            <blockquote><span>SME Feedback</span>Victims of DA are used to using their reptilian brain and are in fight or flight mode so the red would be a trigger for them to draw their to attention to it.</blockquote>
+            <h4>Collecting the data</h4>
+            <p>Although the data continues to be monitored, I identified some trends in users interacting with the button over lockdown. Button use increased during certain points over the last 6 months - these were:</p>
+               <ul> 
+                <li>24 June 2020 - Spike in use at the start of the football season</li>
+                <li>4 July 2020 - Spike in use as pubs and bars began to open</li>
+                <li>15 August 2020 - Decrease in use as further restrictions lifted, allowing people to return to work and more place to visit open</li>
+               </ul>
+             <figure>
+               <img src="images/htp_data.png" class="example" alt="Hide this page data">
+              <figcaption>Data snapshot from 14 April 2020 to 12 October 2020 - data shows a drop in use as lockdown measures ease</figcaption>
+            </figure>
+            <p>Although this data hasn't influenced the design iterations, it has had a crucial impact on allowing us to see how data from a digital service can help us identify what is happening in the real world.</p>
+            <p>It is important to note that this data is ever changing and we need to continue to monitor it, especially as we move into another period of lockdown.</p>
+            <h3>Collaborating with other Government departments</h3>
+            <p>Underpinning all of this MVP work within the MoJ, I coordinated meetings with DWP, Cabinet Office and eventually the Scottish Government. At these sessions, I facilitated the conversations around aligning our design and functionality and ensured that the developers were communicating and code sharing.</p>
+            <p>At each stage of new iteration I ensured the working group would get together to discuss any changes on the designs to share research and align our designs and functionality.</p>
+            <h4>Iterating on the design and language</h4>
+            <p>At a key meeting, the group discussed changing the language from 'Quick Exit' to 'Hide this page'. This decision was taken because it had been tested by DWP, and tested well with charities.</p>
+            <p>In addition, the use of 'Hide this page' presented more of a sense of immediacy, as well as being more descriptive of what the button actually does when the user interacts with the button, so we moved away from 'Quick Exit'.</p>
+            <p>Another important design iteration was the positioning - as a collective group, we agreed that having the button at the bottom of the screen could cause accidental interactions, causing frustration to users. Additionally, it blocked other components on GOV services, such as the 'content' sticky element.</p>
+            <p>This decision by collaboration, resulted in positioning the button at the top of the screen (on mobile).</p>
+            <figure>
+               <img src="images/design_iterations.jpg" class="example " alt="Prototype kit iteration - red">              
+              <figcaption>The designs iterated over several months, with language - position and functionality all changing based on user need.</figcaption>
+            </figure>
+            <figure>
+               <img src="images/design_comparisons.jpg" class="example " alt="Prototype kit iteration - red">              
+              <figcaption>The design component hasn't been implemented on GOV.UK as yet as they are waiting for the component to be available on the Design System.</figcaption>
+            </figure>
+            <h4>Sharing accessibility testing outcomes across GOV</h4> 
+            <p>The LAA - Check Legal Aid team had an Accessibility Audit on their service and this highlighted some improvements to the component which I shared with the working group to ensure everyone was aware of accessibility issues. These were:
+            <ul>
+                <li>Ensuring the button text accurately describes it's purpose</li>
+                <li>Ensure the instruction "(Or press 'Esc' key)" is presented to all users when presented as a sticky element</li>
+                <li>Include visually hidden text at the top of the page to help users of assistive technology be aware of the leave page functionality</li>
+                <li>Differentiate between mobile displays and PC displays zoomed in, so the information about using the escape key is not hidden for non-mobile narrow displays</li>
+            </ul>
+            <p>These changes have been implemented in the latest version of the component, however we will be looking to further test the accessibility as we continue to iterate on it.</p>
+            <h4>Writing the implementation guidance and GOV.UK submission</h4>
+            <p>This part of the process took a great deal of coordination to bring four departments across two Governments together to collaborate and comment on one central document.</p>
+            <p>I created the initial Google doc and scheduled several meetings with the working group to finalise implementation guidance that required feedback and input from:</p>
+            <ul>
+                <li>Developers</li>
+                <li>Content Designers</li>
+                <li>Interaction Designers</li>
+                <li>User Researchers</li>
+                <li>Product Managers</li>
+            </ul>
+            <p>As the lead for the group, I arranged for a final session to agree sign-off on the implementation guidance.</p>
+            <p>Once we had sign-off, I forked the GOV.UK Design System and created the new component with supporting implementation guidance. This was to allow the GDS Design System Working Group to be able to review the guidance in a real-world example. I created a pull request on github which generated a test version of the Design System which was used to support the component submission.</p>
+            <p>In addition to this, I liased with the Head of Interaction Design at GDS and the GOV.UK Design System Product Manager to respond to questions circulating the component.</p>
+            <p>The work that was carried out for this submission has been presented to the GOV.UK Programme Lead as an examplar of what can happen when Government departments work together.</p>
+            <figure>
+               <img src="images/deploy_preview.png" class="example " alt="Prototype kit iteration - red">              
+              <figcaption>Visual showing the forked version of the 'Hide this page' component that is being reviewed by the Design System Working Group.</figcaption>
+            </figure>
+            <h2>Outcomes</h2>
+            <h3>Outcomes for the user</h3>
+            <p>This work has been so important for the Government to be collaborating on and has several positive outcomes for our end users.</p>
+            <ul>
+                <li><strong>The most important</strong> - It helps us keep people safe from harm for anyone using our service to get advice and information about Domestic Abuse or other high risk areas.</li>
+                <li>Users will begin to see a consistent design and functional component across not just GOV.UK, but also Scot.GOV.</li>
+            </ul>
+            <h3>Outcomes for the organisation</h3>
+            <p>The critical thing for this project of work was first and foremost the user. However, it also has had a big impact on how the Ministry of Justice work collaboratively, and also across wider Governement.</p>
+            <ul>
+                <li>Established networks and broke down silos of working to collaborate on a consistent design approach across departments and Governments.</li>
+                <li>Prompted a new 'Online Safety Working Group' to form across Government to look at designs and best practice when designing services, components and patterns which I am a member of.</li>
+                <li>Highlighted how agile delivery teams react to urgent situations and design and develop user-centered solutions at pace.</li>
+            </ul>
+            <p>In addition to the above outcomes, the work is being discussed across Twitter with one user positively commenting on the collaborative, user centered approach.</p>
+            <figure>
+               <img style="width:320px"src="images/tweet.jpg" class="example " alt="Tweet about user centered design">              
+              <figcaption>The comment of 'it doesn't get any more user-centered than this' was such a wonderful nod to the work we have done.</figcaption>
+            </figure>
+        </main>
+	</div>
+	<footer><div class="copyright"><small>&copy; RWK-UX</small></div></footer>	
+	<!-- <script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/main.js"></script> -->
+	</body>
+</html>
