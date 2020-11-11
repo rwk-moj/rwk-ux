@@ -68,6 +68,9 @@ em {
 code {
   color: #d20074;
 }
+li {
+  margin-bottom: 15px;
+}
 
 #header {
   padding: 15px 15px;
