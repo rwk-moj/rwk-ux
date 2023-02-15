@@ -161,6 +161,14 @@ h1, h3, h4, h5, h6 {
     line-height: 1.1;
     margin: 0 0 1.5rem 0;
 }
+
+.cv-heading {
+    background: #80808033;
+    border-top: 8px solid #2f2f2f;
+    padding: 20px 10px;
+    margin-top: 30px;
+}
+
 h2 {
     color: $mainColor;
     line-height: 1.3;

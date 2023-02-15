@@ -370,3 +370,9 @@ footer {
   margin-bottom: 1.25rem;
 }
 
+.cv-heading {
+  background: #80808033;
+    border-top: 8px solid #2f2f2f;
+    padding: 20px 10px;
+    margin-top: 30px;
+}
